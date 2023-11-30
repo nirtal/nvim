@@ -31,6 +31,11 @@ require("catppuccin").setup({
 })
 vim.cmd.colorscheme "catppuccin"
 
+local builtin = require('telescope.builtin')
+
 vim.api.nvim_del_keymap('n', 'Y')
 vim.keymap.set('n', '<c-n>', "<cmd>NvimTreeToggle<CR>", { remap = true })
 vim.keymap.set('n', '<c-b>', "<cmd>NvimTreeFindFileToggle<CR>", { remap = true })
+vim.keymap.set('n', '<c-t>', "<cmd>tabe<CR>", { remap = true })
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<C-o>', builtin.find_files, {})
