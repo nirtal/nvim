@@ -44,6 +44,7 @@ return packer.startup(function(use)
           ts_update()
       end,
   }
+  use "EdenEast/nightfox.nvim"
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
