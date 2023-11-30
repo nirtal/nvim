@@ -26,5 +26,5 @@ if has('persistent_undo')
 endif
 
 set mouse=
-lua require('initlua')
+"lua require('~/.config/nvim/initlua')
 
