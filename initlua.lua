@@ -25,5 +25,12 @@ require("nvim-tree").setup({
   },
 })
 
+
+require("catppuccin").setup({
+	transparent_background = true
+})
+vim.cmd.colorscheme "catppuccin"
+
+vim.api.nvim_del_keymap('n', 'Y')
 vim.keymap.set('n', '<c-n>', "<cmd>NvimTreeToggle<CR>", { remap = true })
 vim.keymap.set('n', '<c-b>', "<cmd>NvimTreeFindFileToggle<CR>", { remap = true })

@@ -30,9 +30,7 @@ return packer.startup(function(use)
 	    'nvim-tree/nvim-web-devicons', -- optional
 	  },
 	}
-
-
-
+	use { "catppuccin/nvim", as = "catppuccin" }
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end
