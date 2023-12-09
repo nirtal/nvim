@@ -45,6 +45,8 @@ return packer.startup(function(use)
       end,
   }
   use "EdenEast/nightfox.nvim"
+  use {'neoclide/coc.nvim', branch = 'release'}
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

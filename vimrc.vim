@@ -28,3 +28,6 @@ endif
 set mouse=
 "lua require('~/.config/nvim/initlua')
 
+let g:coc_filetype_map = {
+  \ 'yaml.ansible': 'ansible',
+  \ }

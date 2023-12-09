@@ -3,18 +3,21 @@ vim.cmd.source(vimrc)
 vim.wo.number = true
 
 require("plugins")
+require("coc")
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- set leader to space
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
--- empty setup using defaults
-require("nvim-tree").setup()
-
 -- OR setup with some options
 require("nvim-tree").setup({
+  update_cwd = true,
   sort = {
     sorter = "case_sensitive",
   },
@@ -90,9 +93,18 @@ require'nvim-treesitter.configs'.setup {
 
 local builtin = require('telescope.builtin')
 
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
 vim.api.nvim_del_keymap('n', 'Y')
 vim.keymap.set('n', '<c-n>', "<cmd>NvimTreeToggle<CR>", { remap = true })
 vim.keymap.set('n', '<c-b>', "<cmd>NvimTreeFindFileToggle<CR>", { remap = true })
 vim.keymap.set('n', '<c-t>', "<cmd>tabe<CR>", { remap = true })
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<C-o>', builtin.find_files, {})
+vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+vim.keymap.set('n', '<C-g>', builtin.live_grep, {})
+vim.keymap.set('n', '<C-l>', "<cmd>Telescope oldfiles<cr>", {})
+vim.keymap.set('n', '<C-k>', "<cmd>Telescope grep_string<cr>", {})
+
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})

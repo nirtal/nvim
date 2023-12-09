@@ -1,0 +1,4 @@
+{
+  "ansible.ansible.useFullyQualifiedCollectionNames": false,
+  "ansible.validation.lint.arguments": "-c ~/.config/nvim/ansible-lint.yml"
+}

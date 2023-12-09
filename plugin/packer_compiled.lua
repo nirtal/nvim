@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/nirtal/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
   },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/home/nirtal/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "/home/nirtal/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
