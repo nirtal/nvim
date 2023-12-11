@@ -1,5 +1,6 @@
 skip_list:
     - "fqcn[action-core]"
     - "fqcn[action]"
-    - "name[play]"
-    - "name[casing]"
+#    - "name[play]"
+#    - "name[casing]"
+#    - "risky-file-permissions"

@@ -1,4 +1,4 @@
 {
   "ansible.ansible.useFullyQualifiedCollectionNames": false,
-  "ansible.validation.lint.arguments": "-c ~/.config/nvim/ansible-lint.yml"
+  "ansible.validation.lint.arguments": "-x ANSIBLE0016,ANSIBLE0012,ANSIBLE0006,204 --exclude roles/any.pricerunner.info --exclude roles/prometheus/files/rules --exclude roles/awx/tasks --exclude roles/cassandra/tasks/37-keyspaces-and-users.yml -c ~/.config/nvim/ansible-lint.yml"
 }
