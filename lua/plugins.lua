@@ -45,6 +45,7 @@ return packer.startup(function(use)
       end,
   }
   use "EdenEast/nightfox.nvim"
+  use "pearofducks/ansible-vim"
   use {'neoclide/coc.nvim', branch = 'release'}
 
 	if PACKER_BOOTSTRAP then
