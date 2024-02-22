@@ -47,6 +47,8 @@ return packer.startup(function(use)
   use "EdenEast/nightfox.nvim"
   use "pearofducks/ansible-vim"
   use {'neoclide/coc.nvim', branch = 'release'}
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+  use "arouene/vim-ansible-vault"
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

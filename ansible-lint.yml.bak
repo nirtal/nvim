@@ -1,0 +1,8 @@
+skip_list:
+      - "fqcn[action-core]"
+      - "fqcn[action]"
+      - "no-handler"
+      - "name[casing]"
+#    - "yaml"
+#    - "name[play]"
+#    - "risky-file-permissions"

@@ -15,6 +15,12 @@ vim.g.maplocalleader = " "
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
+
+vim.opt.splitright = true       -- Vertical split to the right
+vim.opt.splitbelow = true       -- Horizontal split to the bottom
+
+
+
 -- OR setup with some options
 require("nvim-tree").setup({
   update_cwd = true,
@@ -89,6 +95,8 @@ require'nvim-treesitter.configs'.setup {
 
 
 
+vim.opt.termguicolors = true
+require("bufferline").setup{}
 
 
 local builtin = require('telescope.builtin')
@@ -108,3 +116,6 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+vim.keymap.set('n', '<C-v>', "<cmd>AnsibleVault<cr>", {})
+vim.keymap.set('n', '<C-n>', "<cmd>AnsibleUnvault<cr>", {})

@@ -33,3 +33,8 @@ au BufRead,BufNewFile */ansible/*.yml set filetype=yaml.ansible
 let g:coc_filetype_map = {
   \ 'yaml.ansible': 'ansible',
   \ }
+
+" Highlight trailing whitespaces
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+1match ExtraWhitespace /\s\+$/
+
